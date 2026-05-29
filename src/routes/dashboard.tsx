@@ -45,7 +45,16 @@ function Dashboard() {
   return (
     <div className="h-screen max-h-screen relative overflow-hidden flex flex-col font-sans select-none" style={{ backgroundColor: "hsl(var(--background))" }}>
       {/* Fullscreen Starry Sky Background */}
-      <div className="absolute inset-0 w-full h-full starry-bg z-0 pointer-events-none" />
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4"
+      />
+      <div className="absolute inset-0 w-full h-full bg-black/60 z-0 pointer-events-none" />
 
       {/* Glassmorphic Navigation Bar */}
       <header className="relative z-10 w-full">
