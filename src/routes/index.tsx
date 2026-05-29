@@ -1229,7 +1229,9 @@ int main() {
               <p className="mt-4 text-slate-300 text-sm md:text-base leading-relaxed font-sans select-text">
                 By automatically fetching transcripts, generating intelligent summaries, and structuring adaptive quizzes (including interactive programming playgrounds for technical courses), we help you bridge the gap between passive video viewing and verified technical expertise.
               </p>
-              <button`r`n                type="button"`r`n                onClick={() => setHomeView("hero")}
+              <button
+                type="button"
+                onClick={() => setHomeView("hero")}
                 className="liquid-glass rounded-full px-8 py-3 text-sm text-foreground mt-8 hover:scale-[1.03] transition-all cursor-pointer"
               >
                 Back to Home
@@ -1278,7 +1280,9 @@ int main() {
                 </a>
               </div>
 
-              <button`r`n                type="button"`r`n                onClick={() => setHomeView("hero")}
+              <button
+                type="button"
+                onClick={() => setHomeView("hero")}
                 className="liquid-glass rounded-full px-8 py-3 text-sm text-foreground mt-10 hover:scale-[1.03] transition-all cursor-pointer"
               >
                 Back to Home
@@ -1724,7 +1728,9 @@ function InputStep({
             <div className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground select-none">
               {searchResults.length} results found
             </div>
-            <button`r`n              type="button"`r`n              onClick={() => { setSearchQuery(""); setSearchResults([]); }}
+            <button
+              type="button"
+              onClick={() => { setSearchQuery(""); setSearchResults([]); }}
               className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground/60 hover:text-white cursor-pointer transition-colors"
             >
               Clear results
@@ -1789,7 +1795,9 @@ function InputStep({
               </span>
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
             </div>
-            <button`r`n              type="button"`r`n              onClick={onRefreshSuggestions}
+            <button
+              type="button"
+              onClick={onRefreshSuggestions}
               disabled={suggestedLoading}
               className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground/60 hover:text-white cursor-pointer transition-all flex items-center gap-1.5 hover:scale-102 disabled:opacity-50"
             >
@@ -1959,7 +1967,9 @@ function VideoStep({
     <div className="grid gap-6 lg:grid-cols-12 w-full max-w-7xl mx-auto">
       {/* Back to Search Button spanning full width */}
       <div className="lg:col-span-12 flex justify-start animate-fade-rise">
-        <button`r`n          type="button"`r`n          onClick={onBack}
+        <button
+          type="button"
+          onClick={onBack}
           className="flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-white transition-all bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 px-5 py-2.5 rounded-full hover:scale-[1.02] active:scale-[0.98] cursor-pointer select-none shadow-md"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
@@ -2021,7 +2031,9 @@ function VideoStep({
               </p>
             </div>
           ) : (
-            <button`r`n              type="button"`r`n              onClick={onGenerateQuiz}
+            <button
+              type="button"
+              onClick={onGenerateQuiz}
               disabled={!summary || generatingQuiz}
               className="mt-6 h-12 w-full rounded-full bg-white text-black font-semibold hover:scale-[1.02] active:scale-[0.98] transition-all text-sm uppercase tracking-wide disabled:opacity-50 cursor-pointer"
             >
@@ -2033,13 +2045,17 @@ function VideoStep({
 
       <aside className="lg:col-span-4 flex flex-col gap-4 animate-fade-rise">
         <div className="flex rounded-full bg-white/5 border border-white/10 p-1 font-mono text-xs select-none shadow-md">
-          <button`r`n            type="button"`r`n            onClick={() => setActiveTab("summary")}
+          <button
+            type="button"
+            onClick={() => setActiveTab("summary")}
             className={`flex-1 py-2.5 text-center uppercase tracking-wider font-semibold rounded-full transition-all cursor-pointer ${activeTab === "summary" ? "bg-white/10 text-white" : "text-muted-foreground hover:text-white"
               }`}
           >
             AI Summary
           </button>
-          <button`r`n            type="button"`r`n            onClick={() => setActiveTab("transcript")}
+          <button
+            type="button"
+            onClick={() => setActiveTab("transcript")}
             className={`flex-1 py-2.5 text-center uppercase tracking-wider font-semibold rounded-full transition-all cursor-pointer ${activeTab === "transcript" ? "bg-white/10 text-white" : "text-muted-foreground hover:text-white"
               }`}
           >
@@ -2096,7 +2112,9 @@ function VideoStep({
             <div className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground border-b border-white/10 pb-2 mb-3 flex items-center justify-between">
               <span>Interactive Reader</span>
               {activeSegmentIndex >= 0 && (
-                <button`r`n                  type="button"`r`n                  onClick={handleSyncToPlayback}
+                <button
+                  type="button"
+                  onClick={handleSyncToPlayback}
                   className="font-mono text-[9px] uppercase tracking-wider bg-white/10 text-white border border-white/20 px-2.5 py-1 rounded hover:bg-white hover:text-black transition-all font-semibold cursor-pointer"
                 >
                   🎯 Sync to Playback
@@ -2282,7 +2300,9 @@ function QuizStep({
 
       {/* Bottom slide controllers */}
       <div className="flex justify-between items-center gap-4 mt-6 select-none">
-        <button`r`n          type="button"`r`n          disabled={currentIdx === 0}
+        <button
+          type="button"
+          disabled={currentIdx === 0}
           onClick={() => setCurrentIdx(currentIdx - 1)}
           className="rounded-full font-mono text-xs uppercase tracking-wider px-6 py-2.5 border border-white/10 bg-white/5 text-white hover:bg-white/10 transition-all disabled:opacity-30 cursor-pointer"
         >
@@ -2290,14 +2310,18 @@ function QuizStep({
         </button>
 
         {currentIdx < questions.length - 1 ? (
-          <button`r`n            type="button"`r`n            onClick={() => setCurrentIdx(currentIdx + 1)}
+          <button
+            type="button"
+            onClick={() => setCurrentIdx(currentIdx + 1)}
             disabled={answers[currentIdx] < 0}
             className="rounded-full font-mono text-xs uppercase tracking-wider px-6 py-2.5 bg-white text-black font-semibold hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50 cursor-pointer"
           >
             Next Question →
           </button>
         ) : (
-          <button`r`n            type="button"`r`n            onClick={onSubmit}
+          <button
+            type="button"
+            onClick={onSubmit}
             disabled={answers.some((a) => a < 0)}
             className="rounded-full font-mono text-xs uppercase tracking-wider px-6 py-2.5 bg-white text-black font-semibold hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50 cursor-pointer animate-pulse"
           >
@@ -2353,7 +2377,9 @@ function ResultStep({
                   placeholder="Your full name"
                   className="h-12 flex-1 rounded-full border border-white/10 bg-white/5 px-5 font-sans text-sm text-white placeholder-muted-foreground/45 outline-none focus:border-white/30 transition-all"
                 />
-                <button`r`n                  type="button"`r`n                  disabled={!name.trim() || saving}
+                <button
+                  type="button"
+                  disabled={!name.trim() || saving}
                   onClick={onClaim}
                   className="h-12 rounded-full px-8 bg-white text-black font-semibold hover:scale-[1.02] active:scale-[0.98] transition-all text-xs uppercase tracking-wider cursor-pointer"
                 >
@@ -2365,7 +2391,9 @@ function ResultStep({
             <>
               <h2 className="text-3xl font-normal text-white" style={{ fontFamily: "'Instrument Serif', serif" }}>Not quite — 70% required.</h2>
               <p className="mt-2 text-muted-foreground text-sm font-sans select-text">Review the answers below and try again.</p>
-              <button`r`n                type="button"`r`n                onClick={onRetry}
+              <button
+                type="button"
+                onClick={onRetry}
                 className="mt-6 h-12 rounded-full px-8 bg-white text-black font-semibold hover:scale-[1.02] active:scale-[0.98] transition-all text-xs uppercase tracking-wider cursor-pointer"
               >
                 Retake quiz →
@@ -2594,7 +2622,9 @@ function LeetCodeStep({
         <div className="lg:col-span-5 flex flex-col h-full bg-slate-900/60 border border-white/5 rounded-2xl overflow-hidden backdrop-blur-md animate-fade-rise">
           {/* Header row */}
           <div className="flex items-center justify-between border-b border-white/10 p-4 shrink-0 bg-slate-950/40 select-none">
-            <button`r`n              type="button"`r`n              onClick={() => setActiveQuestion(null)}
+            <button
+              type="button"
+              onClick={() => setActiveQuestion(null)}
               className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-wider text-muted-foreground hover:text-white transition-colors cursor-pointer"
             >
               <ArrowLeft className="h-3 w-3" /> Back
@@ -2616,7 +2646,9 @@ function LeetCodeStep({
 
           {/* Tabs row */}
           <div className="flex border-b border-white/5 bg-slate-950/20 px-4 select-none shrink-0">
-            <button`r`n              type="button"`r`n              onClick={() => setLeftTab("description")}
+            <button
+              type="button"
+              onClick={() => setLeftTab("description")}
               className={`flex-1 py-3 text-center font-mono text-[10px] uppercase tracking-wider font-semibold border-b-2 transition-all cursor-pointer ${leftTab === "description"
                   ? "border-emerald-500 text-white"
                   : "border-transparent text-muted-foreground hover:text-white"
@@ -2624,7 +2656,9 @@ function LeetCodeStep({
             >
               Description
             </button>
-            <button`r`n              type="button"`r`n              onClick={() => setLeftTab("testcases")}
+            <button
+              type="button"
+              onClick={() => setLeftTab("testcases")}
               className={`flex-1 py-3 text-center font-mono text-[10px] uppercase tracking-wider font-semibold border-b-2 transition-all cursor-pointer ${leftTab === "testcases"
                   ? "border-emerald-500 text-white"
                   : "border-transparent text-muted-foreground hover:text-white"
@@ -2712,7 +2746,9 @@ function LeetCodeStep({
                 <option value="javascript">JavaScript</option>
                 <option value="cpp">C++</option>
               </select>
-              <button`r`n                type="button"`r`n                onClick={() => {
+              <button
+                type="button"
+                onClick={() => {
                   if (confirm("Reset editor code to boilerplate template? This will erase your current work.")) {
                     setUserCode(activeQuestion.starterCode[selectedLanguage]);
                     toast.success("Editor reset.");
@@ -2744,13 +2780,17 @@ function LeetCodeStep({
 
           {/* Action Row */}
           <div className="flex items-center justify-between border-t border-white/10 p-4 shrink-0 bg-slate-950/40 select-none">
-            <button`r`n              type="button"`r`n              onClick={handleRunCode}
+            <button
+              type="button"
+              onClick={handleRunCode}
               disabled={runLoading}
               className="font-mono text-xs uppercase tracking-wider px-5 py-2.5 rounded-full border border-white/10 bg-white/5 text-white hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 flex items-center gap-1.5 cursor-pointer font-semibold"
             >
               <Play className="h-3.5 w-3.5 fill-white/10" /> Run Code
             </button>
-            <button`r`n              type="button"`r`n              onClick={handleSubmitSolution}
+            <button
+              type="button"
+              onClick={handleSubmitSolution}
               disabled={runLoading}
               className="font-mono text-xs uppercase tracking-wider px-7 py-2.5 rounded-full bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 flex items-center gap-1.5 cursor-pointer font-bold shadow-[0_0_15px_rgba(16,185,129,0.2)]"
             >
@@ -2830,7 +2870,9 @@ function LeetCodeStep({
 
                 return (
                   <div key={`day-${day}`} className="flex flex-col items-center justify-center relative">
-                    <button`r`n                      type="button"`r`n                      onClick={() => {
+                    <button
+                      type="button"
+                      onClick={() => {
                         if (isSolved) {
                           toast.success(`Completed challenges on May ${day}, 2026!`);
                         } else if (isActiveDay) {
@@ -2884,7 +2926,9 @@ function LeetCodeStep({
             <span className="flex items-center gap-1.5 text-emerald-400 font-bold">
               <Zap className="h-3.5 w-3.5 fill-emerald-400/20 text-emerald-400" /> {currentStreak * 15 + leetcodeSolved.length * 10} Redeem
             </span>
-            <button`r`n              type="button"`r`n              onClick={() => {
+            <button
+              type="button"
+              onClick={() => {
                 toast.info(
                   "Rules: 1. Solve the daily problem or any DSA question to extend your streak. 2. Each correct solution awards +10 points. 3. Active streaks multiply points (+15 per day)!"
                 );
