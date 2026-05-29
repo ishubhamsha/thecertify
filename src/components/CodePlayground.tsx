@@ -217,6 +217,7 @@ export function CodePlayground({ challenge, onPass, difficulty }: CodePlayground
       {/* Sleek Workspace Top Header (LeetCode/HackerRank Style) */}
       <div className="flex items-center justify-between border border-white/10 bg-[#040c18]/60 backdrop-blur-md px-6 py-3.5 rounded-2xl shadow-2xl font-mono text-xs text-foreground select-none shrink-0">
         <button
+          type="button"
           onClick={() => {
             window.location.reload();
           }}
@@ -265,6 +266,7 @@ export function CodePlayground({ challenge, onPass, difficulty }: CodePlayground
             {/* Sub Navigation */}
             <div className="flex border-b border-white/10 mt-2 mb-4 select-none">
               <button
+                type="button"
                 onClick={() => setActiveTab("instructions")}
                 className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 border-b-2 border-transparent -mb-[1px] transition-all cursor-pointer ${
                   activeTab === "instructions"
@@ -275,6 +277,7 @@ export function CodePlayground({ challenge, onPass, difficulty }: CodePlayground
                 Description
               </button>
               <button
+                type="button"
                 onClick={() => setActiveTab("testcases")}
                 className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 border-b-2 border-transparent -mb-[1px] transition-all cursor-pointer ${
                   activeTab === "testcases"
@@ -335,6 +338,7 @@ export function CodePlayground({ challenge, onPass, difficulty }: CodePlayground
                   {challenge.language}
                 </span>
                 <button
+                  type="button"
                   onClick={handleReset}
                   className="flex items-center gap-1.5 hover:text-red-400 font-mono transition-colors text-muted-foreground cursor-pointer"
                   title="Reset starter template"
@@ -380,6 +384,7 @@ export function CodePlayground({ challenge, onPass, difficulty }: CodePlayground
           {/* Action Button Row */}
           <div className="flex gap-3 shrink-0 select-none">
             <button
+              type="button"
               onClick={() => handleExecute("sandbox")}
               disabled={running}
               className="flex-1 bg-white/5 hover:bg-white/10 border border-white/10 text-foreground py-4 rounded-xl font-mono text-xs uppercase tracking-wider font-semibold transition-all cursor-pointer flex items-center justify-center gap-2"
@@ -393,6 +398,7 @@ export function CodePlayground({ challenge, onPass, difficulty }: CodePlayground
             </button>
 
             <button
+              type="button"
               onClick={() => handleExecute("tests")}
               disabled={running}
               className="flex-1 bg-emerald-500 hover:bg-emerald-400 text-black py-4 rounded-xl font-mono text-xs uppercase tracking-wider font-bold transition-all cursor-pointer flex items-center justify-center gap-2 border-none"

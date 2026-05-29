@@ -79,6 +79,7 @@ function Dashboard() {
             </span>
 
             <button
+              type="button"
               onClick={async () => {
                 await signOut();
                 nav({ to: "/auth" });
@@ -150,7 +151,7 @@ function Dashboard() {
               No certificates earned yet
             </p>
             <Link to="/">
-              <button className="mt-6 h-12 rounded-full px-8 bg-white text-black font-semibold hover:scale-[1.02] active:scale-[0.98] transition-all text-sm uppercase tracking-wide cursor-pointer">
+              <button type="button" className="mt-6 h-12 rounded-full px-8 bg-white text-black font-semibold hover:scale-[1.02] active:scale-[0.98] transition-all text-sm uppercase tracking-wide cursor-pointer">
                 Earn your first →
               </button>
             </Link>
@@ -221,6 +222,7 @@ function Dashboard() {
                         View →
                       </Link>
                       <button
+                        type="button"
                         onClick={() => {
                           if (confirm("Delete this certificate?")) del.mutate(c.id);
                         }}
