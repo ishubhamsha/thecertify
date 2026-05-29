@@ -1138,7 +1138,7 @@ int main() {
             </div>
 
             {/* CTA / Auth controls */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-6">
               {authLoading ? null : user ? (
                 <>
                   <Link to="/dashboard" className="font-mono text-[10px] uppercase tracking-[0.3em] underline text-foreground/80 hover:text-foreground">
@@ -1152,12 +1152,20 @@ int main() {
                   </button>
                 </>
               ) : (
-                <button
-                  onClick={triggerBeginJourney}
-                  className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03] transition-all cursor-pointer"
-                >
-                  Begin Journey
-                </button>
+                <>
+                  <Link
+                    to="/auth"
+                    className="font-mono text-[10px] uppercase tracking-[0.3em] underline text-foreground/80 hover:text-foreground hover:opacity-100 transition-opacity cursor-pointer"
+                  >
+                    Sign In
+                  </Link>
+                  <button
+                    onClick={triggerBeginJourney}
+                    className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03] transition-all cursor-pointer"
+                  >
+                    Begin Journey
+                  </button>
+                </>
               )}
             </div>
           </nav>
