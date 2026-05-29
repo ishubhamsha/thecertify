@@ -1074,7 +1074,7 @@ int main() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260505_105838_084968f2-4415-42a4-971a-3bec54539549.mp4" type="video/mp4" />
+            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4" type="video/mp4" />
           </video>
           {/* Subtle dark overlay to keep the text and glass cards beautiful and readable */}
           <div className="absolute inset-0 bg-slate-950/35" />
