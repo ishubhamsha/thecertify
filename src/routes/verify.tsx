@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -39,6 +39,13 @@ function VerifyPage() {
       setLoading(false);
     }
   }
+
+  useEffect(() => {
+    if (search.id && search.id.trim()) {
+      setId(search.id.trim());
+      void lookup(search.id.trim());
+    }
+  }, [search.id]);
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();

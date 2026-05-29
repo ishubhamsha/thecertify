@@ -26,15 +26,45 @@ export function Certificate(props: Props) {
 
   const pct = Math.round((props.score / props.total) * 100);
 
+  const getLinkedInShareUrl = () => {
+    if (typeof window === "undefined") return "";
+    
+    const name = encodeURIComponent(`Certificate of Completion in ${props.videoTitle} (${props.difficulty} Level)`);
+    const organizationName = encodeURIComponent("thecertify");
+    const certId = encodeURIComponent(props.certId);
+    
+    // Auto-verify URL pointing directly to the verify page
+    const certUrl = encodeURIComponent(`${window.location.origin}/verify?id=${props.certId}`);
+    
+    const today = new Date();
+    const issueMonth = today.getMonth() + 1; // 1-indexed
+    const issueYear = today.getFullYear();
+
+    return `https://www.linkedin.com/profile/add?startTask=CERTIFICATION&name=${name}&organizationName=${organizationName}&issueMonth=${issueMonth}&issueYear=${issueYear}&certId=${certId}&certUrl=${certUrl}`;
+  };
+
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between print:hidden">
         <Link to="/" className="font-mono text-xs uppercase underline">
           ← New certification
         </Link>
-        <Button onClick={() => window.print()} className="font-mono uppercase tracking-wide">
-          Download / Print
-        </Button>
+        <div className="flex items-center gap-3">
+          <a
+            href={getLinkedInShareUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#0077b5] hover:bg-[#0077b5]/90 text-white font-mono text-xs uppercase tracking-wider font-semibold py-2.5 px-5 rounded-md shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
+          >
+            <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+            Add to LinkedIn
+          </a>
+          <Button onClick={() => window.print()} className="font-mono uppercase tracking-wide">
+            Download / Print
+          </Button>
+        </div>
       </div>
 
       <div
@@ -157,9 +187,41 @@ export function Certificate(props: Props) {
 
       <style>{`
         @media print {
-          body * { visibility: hidden; }
-          #cert, #cert * { visibility: visible; }
-          #cert { position: absolute; inset: 0; margin: 0; border: 0; }
+          @page {
+            size: landscape;
+            margin: 0;
+          }
+          html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-color: #fcfbf9 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          body * {
+            visibility: hidden;
+          }
+          #cert, #cert * {
+            visibility: visible;
+          }
+          #cert {
+            position: absolute;
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 92% !important;
+            max-width: 92% !important;
+            height: auto !important;
+            aspect-ratio: 1.414/1 !important;
+            margin: 0 !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            background-color: #fcfbf9 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
         }
       `}</style>
     </div>

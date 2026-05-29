@@ -1101,6 +1101,12 @@ int main() {
               {showApp ? (
                 <>
                   <button
+                    onClick={() => goHome("hero")}
+                    className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                  >
+                    Home
+                  </button>
+                  <button
                     onClick={() => setStep(lastCertStep)}
                     className={`text-sm font-semibold transition-colors cursor-pointer ${step !== "leetcode" ? "text-white border-b-2 border-emerald-500 pb-1" : "text-muted-foreground hover:text-foreground"}`}
                   >
