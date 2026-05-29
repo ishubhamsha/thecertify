@@ -79,10 +79,10 @@ export function Certificate(props: Props) {
         <div className="absolute inset-7 border border-[#c5a880]/30" />
 
         {/* Elegant Gold Corner Ornaments */}
-        <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-[#c5a880] rounded-tl-sm" />
-        <div className="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-[#c5a880] rounded-tr-sm" />
-        <div className="absolute bottom-6 left-6 w-8 h-8 border-b-2 border-l-2 border-[#c5a880] rounded-bl-sm" />
-        <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-[#c5a880] rounded-br-sm" />
+        <div className="absolute top-6 left-6 size-8 border-t-2 border-l-2 border-[#c5a880] rounded-tl-sm" />
+        <div className="absolute top-6 right-6 size-8 border-t-2 border-r-2 border-[#c5a880] rounded-tr-sm" />
+        <div className="absolute bottom-6 left-6 size-8 border-b-2 border-l-2 border-[#c5a880] rounded-bl-sm" />
+        <div className="absolute bottom-6 right-6 size-8 border-b-2 border-r-2 border-[#c5a880] rounded-br-sm" />
 
         <div className="relative flex h-full flex-col justify-between p-6">
           {/* Certificate Header */}
