@@ -1089,6 +1089,7 @@ int main() {
           <nav className="flex flex-row justify-between items-center px-8 py-6 max-w-7xl mx-auto">
             {/* Logo */}
             <button
+              type="button"
               onClick={() => goHome("hero")}
               className="text-3xl tracking-tight text-foreground hover:opacity-90 transition-opacity font-normal select-none cursor-pointer"
               style={{ fontFamily: "'Instrument Serif', serif" }}
@@ -1101,18 +1102,21 @@ int main() {
               {showApp ? (
                 <>
                   <button
+                    type="button"
                     onClick={() => goHome("hero")}
                     className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                   >
                     Home
                   </button>
                   <button
+                    type="button"
                     onClick={() => setStep(lastCertStep)}
                     className={`text-sm font-semibold transition-colors cursor-pointer ${step !== "leetcode" ? "text-white border-b-2 border-emerald-500 pb-1" : "text-muted-foreground hover:text-foreground"}`}
                   >
                     Video Certifications
                   </button>
                   <button
+                    type="button"
                     onClick={() => setStep("leetcode")}
                     className={`text-sm font-semibold transition-colors cursor-pointer ${step === "leetcode" ? "text-white border-b-2 border-emerald-500 pb-1" : "text-muted-foreground hover:text-foreground"}`}
                   >
@@ -1122,18 +1126,21 @@ int main() {
               ) : (
                 <>
                   <button
+                    type="button"
                     onClick={() => goHome("hero")}
                     className={`text-sm transition-colors cursor-pointer ${!showApp && homeView === "hero" ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground"}`}
                   >
                     Home
                   </button>
                   <button
+                    type="button"
                     onClick={() => goHome("about")}
                     className={`text-sm transition-colors cursor-pointer ${!showApp && homeView === "about" ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground"}`}
                   >
                     About
                   </button>
                   <button
+                    type="button"
                     onClick={() => goHome("reach")}
                     className={`text-sm transition-colors cursor-pointer ${!showApp && homeView === "reach" ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground"}`}
                   >
@@ -1151,6 +1158,7 @@ int main() {
                     Dashboard
                   </Link>
                   <button
+                    type="button"
                     onClick={async () => { await signOut(); goHome("hero"); }}
                     className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03] transition-all cursor-pointer"
                   >
@@ -1166,6 +1174,7 @@ int main() {
                     Sign In
                   </Link>
                   <button
+                    type="button"
                     onClick={triggerBeginJourney}
                     className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03] transition-all cursor-pointer"
                   >
@@ -1198,6 +1207,7 @@ int main() {
               </p>
 
               <button
+                type="button"
                 onClick={triggerBeginJourney}
                 className="liquid-glass rounded-full px-14 py-5 text-base text-foreground mt-12 hover:scale-[1.03] transition-all cursor-pointer animate-fade-rise-delay-2"
               >
