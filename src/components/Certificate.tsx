@@ -33,8 +33,8 @@ export function Certificate(props: Props) {
     const organizationName = encodeURIComponent("thecertify");
     const certId = encodeURIComponent(props.certId);
     
-    // Auto-verify URL pointing directly to the verify page
-    const certUrl = encodeURIComponent(`${window.location.origin}/verify?id=${props.certId}`);
+    // Auto-verify URL pointing directly to the live production verify page
+    const certUrl = encodeURIComponent(`https://thecertify.qzz.io/verify?id=${props.certId}`);
     
     const today = new Date();
     const issueMonth = today.getMonth() + 1; // 1-indexed
